@@ -13,8 +13,9 @@ import org.springframework.stereotype.Repository;
 import jwd.knjizara.model.Manifestacija;
 
 @Repository
-public interface ManifestacijaRepository extends JpaRepository<Manifestacija, Long> { 
-	Page<Manifestacija> findByTakmicenjaGodinaId(Long mestoId, Pageable pageRequest);
+public interface ManifestacijaRepository extends JpaRepository<ManifestacijaRepository, Long> { 
+	Page<Manifestacija> findByManifestacijaId(Long mestoId, Pageable pageRequest);
+	
 	@Query("SELECT k FROM Manifestacije k WHERE "
 			+ "(:naziv IS NULL or k.naziv like :naziv ) AND "
 			+ "(:datumOdrzavanja IS NULL OR k.datumOdrzavanja  like :datumOdrzavanja ) AND "

@@ -1,26 +1,24 @@
 package jwd.knjizara.service.impl;
 
-import java.util.List;
-
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import jwd.knjizara.model.TakmicenjaGodina;
-import jwd.knjizara.repository.TakmicenjaGodinaRepository;
-import jwd.knjizara.service.TakmicenjaGodinaService;
+import jwd.knjizara.repository.ManifestacijaRepository;
+import jwd.knjizara.service.ManifestacijaService;
 //import jwd.knjizara.service.PrevoznikService;
 
 	@Service
 	@Transactional
-	public class JpaTakmicenjaGodinaServiceImpl implements TakmicenjaGodinaService {
+	public class JpaTakmicenjaGodinaServiceImpl implements TakmicenjaGodina {
 		@Autowired
-		private TakmicenjaGodinaRepository takmicenjaGodinaRepository;
+		private ManifestacijaRepository manifestacijaRepository;
 
 		@Override
 		public List<TakmicenjaGodina> findAll() {
-			return takmicenjaGodinaRepository.findAll();
+			return manifestacijaRepository.findAll();
 		}
 
 		@Override
@@ -29,12 +27,12 @@ import jwd.knjizara.service.TakmicenjaGodinaService;
 		}
 
 		@Override
-		public void save(TakmicenjaGodina rakmicenjaGodina) {
-			takmicenjaGodinaRepository.save(rakmicenjaGodina);
+		public void save(Manifestacija manifestacija) {
+			manifestacijaRepository.save(manifestacija);
 		}
 
 		@Override
 		public void remove(Long id) {
-			takmicenjaGodinaRepository.delete(id);
+			manifestacijaRepository.delete(id);
 		}
 }

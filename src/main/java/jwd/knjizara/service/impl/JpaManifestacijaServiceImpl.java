@@ -1,5 +1,3 @@
-package jwd.knjizara.service.impl;
-
 import java.util.Date;
 import java.util.List;
 
