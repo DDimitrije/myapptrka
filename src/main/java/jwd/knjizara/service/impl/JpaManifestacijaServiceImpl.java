@@ -1,7 +1,7 @@
-import java.util.Date;
-import java.util.List;
+package jwd.knjizara.service.impl;
 
-import javax.persistence.Column;
+import java.util.Date;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,10 +16,10 @@ import jwd.knjizara.service.ManifestacijaService;
 @Service
 @Transactional
 public class JpaManifestacijaServiceImpl implements ManifestacijaService {
-	
+
 	@Autowired
 	private ManifestacijaRepository manifestacijaRepository;
-
+	
 	@Override
 	public Page<Manifestacija> findAll(int pageNum) {
 		return manifestacijaRepository.findAll(new PageRequest(pageNum, 5));
@@ -42,23 +42,28 @@ public class JpaManifestacijaServiceImpl implements ManifestacijaService {
 
 	@Override
 	public Page<Manifestacija> findByTakmicenjaGodinaId(int pageNum, Long takmicenjaGodinaId) {
-		
+
 		return manifestacijaRepository.findByTakmicenjaGodinaId(takmicenjaGodinaId, new PageRequest(pageNum, 5));
 	}
 
 	@Override
-	public Page<Manifestacija> pretraga(String naziv, Date datumOdrzavanja, String mestoOdrzavanja, int page) {
-//		if(naziv != null ){
-//			naziv = "%" + naziv + "%";
-//		}
-		return manifestacijaRepository.pretraga(naziv, datumOdrzavanja, mestoOdrzavanja, new PageRequest(page, 5));
+	public Page<Manifestacija> pretraga(String naziv, Date datumOdrzavanja, String mestoOdrzavanja,  int page) {// String
+																														// nazivPivare,
+																										// Strin																												// nazivPivare
+		if (naziv != null) {
+			naziv = "%" + naziv + "%";
+		}
+		return manifestacijaRepository.pretraga(naziv, datumOdrzavanja, mestoOdrzavanja,  new PageRequest(page, 5));// nazivPivare
+																											// nazivPivare,
+																											// kolicina
+																											// ,
 	}
-	
+
 	// dugme nestalo
 //	@Override
 //	public Page<Manifestacija> nestalo(int page) {
-//		
-//		return manifestacijaRepository.nestalo(new  PageRequest(page, 5));
+//
+//		return manifestacijaRepository.nestalo(new PageRequest(page, 5));
 //	}
-
+	
 }
