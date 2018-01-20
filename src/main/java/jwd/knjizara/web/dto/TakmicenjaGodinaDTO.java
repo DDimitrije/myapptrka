@@ -2,6 +2,7 @@ package jwd.knjizara.web.dto;
 
 public class TakmicenjaGodinaDTO {
 	private Long id;
+	private String nazivTrke;
 //	private String naziv;
 //	private String PIB;
 //	private String drzava;
@@ -11,6 +12,12 @@ public class TakmicenjaGodinaDTO {
 	}
 	public void setId(Long id) {
 		this.id = id;
+	}
+	public String getNazivTrke() {
+		return nazivTrke;
+	}
+	public void setNazivTrke(String nazivTrke) {
+		this.nazivTrke = nazivTrke;
 	}
 //	public String getNaziv() {
 //		return naziv;

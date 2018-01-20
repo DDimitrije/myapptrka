@@ -60,6 +60,7 @@ import jwd.knjizara.web.dto.TrkacDTO;
 				trkaci = trkacService.pretraga(ime, prezime, pol,velicinaMajce, adresa, grad, drzava, najBoljeVreme, klub, pageNum); //nazivPivare,  kolicina, pageNum); //nazivPivare,
 			//Dugme Nestalo
 			}else{
+				trkaci = trkacService.findAll(pageNum);
 //			if(proveraNestalo == true){
 //					trkaci = trkacService.nestalo(pageNum);
 //				}else{

@@ -63,6 +63,7 @@ public class ApiMenifestacijaController {
 				manifestacije = manifestacijaService.pretraga(naziv, datumOdrzavanja, mestoOdrzavanja, pageNum); //nazivPivare,  kolicina, pageNum); //nazivPivare,
 			//Dugme Nestalo
 			}else{
+				manifestacije = manifestacijaService.findAll(pageNum);
 //			if(proveraNestalo == true){
 //					manifestacije = manifestacijaService.nestalo(pageNum);
 //				}else{
@@ -116,8 +117,7 @@ public class ApiMenifestacijaController {
 //			
 //		}
 		
-		@RequestMapping(method=RequestMethod.PUT,
-				value="/{id}")
+		@RequestMapping(method=RequestMethod.PUT, value="/{id}")
 		public ResponseEntity<ManifestacijaDTO> edit(
 				@PathVariable Long id,
 				@RequestBody ManifestacijaDTO izmenjen){
@@ -129,12 +129,10 @@ public class ApiMenifestacijaController {
 			Manifestacija manifestacija = toManifestacija.convert(izmenjen); 
 			manifestacijaService.save(manifestacija);
 			
-			return new ResponseEntity<>(toMenifestacijaDTO.convert(manifestacija),
-					HttpStatus.OK);
+			return new ResponseEntity<>(toMenifestacijaDTO.convert(manifestacija), HttpStatus.OK);
 		}
 		
-		@RequestMapping(method=RequestMethod.DELETE,
-				value="/{id}")
+		@RequestMapping(method=RequestMethod.DELETE, value="/{id}")
 		public ResponseEntity<ManifestacijaDTO> delete(@PathVariable Long id){
 			manifestacijaService.remove(id);
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);

@@ -1,5 +1,5 @@
 package jwd.knjizara.support;
-
+/*
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
@@ -46,4 +46,4 @@ public class TrkaDTOTOTrka implements Converter<TrkaDTO, Trka> {
 		return trka;
 	}
 
-}
+}*/

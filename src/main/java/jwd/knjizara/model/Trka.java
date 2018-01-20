@@ -28,8 +28,8 @@ public class Trka {
 	private String kategorija;
 
 	
-	@ManyToOne(fetch=FetchType.EAGER)
-	private Manifestacija manifestacija;
+//	@ManyToOne(fetch=FetchType.EAGER)
+//	private Manifestacija manifestacija;
 	//private TakmicenjaGodina takmicenjaGodina;
 	
 	//Trkaci
@@ -74,15 +74,17 @@ public Long getId() {
 //			takmicenjaGodina.getTrke().add(this);
 //		}
 //	}
-	public Manifestacija getManifestacija() {
-		return manifestacija;
-	}
-	public void setManifestacija(Manifestacija manifestacija) {
-		this.manifestacija = manifestacija;
-		if(manifestacija!=null && !manifestacija.getTrke().contains(this)){
-			manifestacija.getTrke().add(this);
-		}
-	}
+	
+	
+//	public Manifestacija getManifestacija() {
+//		return manifestacija;
+//	}
+//	public void setManifestacija(Manifestacija manifestacija) {
+//		this.manifestacija = manifestacija;
+//		if(manifestacija!=null && !manifestacija.getTrke().contains(this)){
+//			manifestacija.getTrke().add(this);
+//		}
+//	}
 	
 	public List<Trkac> getTrkaci() {
 		return trkaci;
