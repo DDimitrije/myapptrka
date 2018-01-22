@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 
 
 import jwd.knjizara.model.Manifestacija;
-import jwd.knjizara.model.Pivo;
+
 
 @Repository
 public interface ManifestacijaRepository extends JpaRepository<Manifestacija, Long> { 

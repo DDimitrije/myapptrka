@@ -22,6 +22,7 @@ public class ManifestacijaTOManifestacijaDTO implements Converter<Manifestacija,
 		dto.setNaziv(source.getNaziv());
 		dto.setDatumOdrzavanja(source.getDatumOdrzavanja());
 		dto.setMestoOdrzavanja(source.getMestoOdrzavanja());
+		dto.setTakmicenjaGodinaId(source.getTakmicenjaGodina().getId());
 //		dto.setProcenat_alkohola(source.getProcenat_alkohola());
 //		dto.setKolicina(source.getKolicina());
 //		dto.setPivaraId(source.getPivara().getId());

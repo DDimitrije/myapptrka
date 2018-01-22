@@ -13,7 +13,6 @@ import jwd.knjizara.service.TakmicenjaGodinaService;
 
 @Service
 @Transactional
-
 public class JpaTakmicenjaGodinaServiceImpl implements TakmicenjaGodinaService {
 	@Autowired
 	private TakmicenjaGodinaRepository takmicenjaGodinaRepository;

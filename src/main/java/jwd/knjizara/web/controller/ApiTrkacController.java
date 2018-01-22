@@ -54,12 +54,13 @@ import jwd.knjizara.web.dto.TrkacDTO;
 				@RequestParam(defaultValue="0") int pageNum){
 	
 			
-			Page<Trkac> trkaci = null;
+			Page<Trkac> trkaci;
 			//(String naziv, Double minI, Double maxI, String trkaciraNaziv, Integer kolicina, int page
 			if(ime != null || prezime != null || pol!= null || velicinaMajce != null || adresa!= null ||  grad!= null || drzava!= null ||  najBoljeVreme!= null ||  klub!= null) { //|| nazivPivare != null ||  kolicina != null) {
 				trkaci = trkacService.pretraga(ime, prezime, pol,velicinaMajce, adresa, grad, drzava, najBoljeVreme, klub, pageNum); //nazivPivare,  kolicina, pageNum); //nazivPivare,
 			//Dugme Nestalo
 			}else{
+				trkaci = trkacService.findAll(pageNum);
 //			if(proveraNestalo == true){
 //					trkaci = trkacService.nestalo(pageNum);
 //				}else{
@@ -69,13 +70,10 @@ import jwd.knjizara.web.dto.TrkacDTO;
 			HttpHeaders headers = new HttpHeaders();
 			headers.add("totalPages", Integer.toString(trkaci.getTotalPages()) );
 			return  new ResponseEntity<>(
-					toTrkacDTO.convert(trkaci.getContent()),
-					headers,
-					HttpStatus.OK);
+					toTrkacDTO.convert(trkaci.getContent()), headers, HttpStatus.OK);
 		}
 		
-		@RequestMapping(method=RequestMethod.GET,
-						value="/{id}")
+		@RequestMapping(method=RequestMethod.GET, value="/{id}")
 		public ResponseEntity<TrkacDTO> get(
 				@PathVariable Long id){
 			Trkac trkac = trkacService.findOne(id);
@@ -113,8 +111,7 @@ import jwd.knjizara.web.dto.TrkacDTO;
 //			
 //		}
 		
-		@RequestMapping(method=RequestMethod.PUT,
-				value="/{id}")
+		@RequestMapping(method=RequestMethod.PUT, value="/{id}")
 		public ResponseEntity<TrkacDTO> edit(
 				@PathVariable Long id,
 				@RequestBody TrkacDTO izmenjen){
@@ -130,8 +127,7 @@ import jwd.knjizara.web.dto.TrkacDTO;
 					HttpStatus.OK);
 		}
 		
-		@RequestMapping(method=RequestMethod.DELETE,
-				value="/{id}")
+		@RequestMapping(method=RequestMethod.DELETE, value="/{id}")
 		public ResponseEntity<TrkacDTO> delete(@PathVariable Long id){
 			trkacService.remove(id);
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);

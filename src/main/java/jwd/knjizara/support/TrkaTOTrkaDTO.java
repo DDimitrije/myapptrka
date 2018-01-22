@@ -18,11 +18,12 @@ public class TrkaTOTrkaDTO implements Converter<Trka, TrkaDTO> {
 		dto.setId(source.getId());
 		dto.setDuzinaStaze(source.getDuzinaStaze());
 		dto.setKategorija(source.getKategorija());
+		dto.setManifestacijaId(source.getManifestacija().getId());
+		dto.setManifestacijaNaziv(source.getManifestacija().getNaziv());
 //		dto.setIBU(source.getIBU());
 //		dto.setProcenat_alkohola(source.getProcenat_alkohola());
 //		dto.setKolicina(source.getKolicina());
-		dto.setManifestacijaId(source.getManifestacija().getId());
-		dto.setManifestacijaNaziv(source.getManifestacija().getNaziv());
+		
 		// dto.setVrstaPivaId(source.getVrstaPiva().getId());
 		// dto.setVrstaPivaNaziv(source.getVrstaPiva().getNaziv());
 

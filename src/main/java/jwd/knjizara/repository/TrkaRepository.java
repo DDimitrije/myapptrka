@@ -13,7 +13,7 @@ import jwd.knjizara.model.Trkac;
 
 @Repository
 public interface TrkaRepository extends JpaRepository<Trka, Long>  {
-Page<Trka> findByManfestacijaId( Pageable pageRequest);
+//Page<Trka> findByManfestacijaId( Pageable pageRequest);
 	
 //	@Query("SELECT k FROM Trka k WHERE "
 //			+ "(:ime IS NULL or k.ime like :ime ) AND "
@@ -38,13 +38,13 @@ Page<Trka> findByManfestacijaId( Pageable pageRequest);
 //			@Param("klub") String klub,
 //			Pageable pageRequest);
 
-	@Query("SELECT k FROM Trka k WHERE " + "(:duzinaStaze IS NULL or k.duzinaStaze like :duzinaStaze ) AND "
-			+ "(:kategorija IS NULL OR k.kategorija  like :kategorija ) "
-
-	)
-
-	Page<Trka> pretraga(@Param("duzinaStaze") String duzinaStaze, @Param("kategorija") String kategorija,
-			Pageable pageRequest);
-
-	Page<Trka> findByManifestacijaId(Long manifestacijaId, PageRequest pageRequest); 
+//	@Query("SELECT k FROM Trka k WHERE " + "(:duzinaStaze IS NULL or k.duzinaStaze like :duzinaStaze ) AND "
+//			+ "(:kategorija IS NULL OR k.kategorija  like :kategorija ) "
+//
+//	)
+//
+//	Page<Trka> pretraga(@Param("duzinaStaze") String duzinaStaze, @Param("kategorija") String kategorija,
+//			Pageable pageRequest);
+//
+//	Page<Trka> findByManifestacijaId(Long manifestacijaId, PageRequest pageRequest); 
 }

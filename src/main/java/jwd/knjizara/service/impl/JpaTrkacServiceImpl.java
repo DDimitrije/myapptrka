@@ -48,17 +48,6 @@ public class JpaTrkacServiceImpl implements TrkacService {
 //			}
 			return trkacRepository.pretraga(ime, prezime,pol, velicinaMajce, adresa, grad,  drzava, najBoljeVreme, klub, new PageRequest(page, 5));//nazivPivare nazivPivare,  kolicina ,
 		}
-		
-//		Page<Trkac> pretraga(@Param("ime") String ime, 
-//				@Param("prezime") String prezime, 
-//				@Param("pol") String pol,
-//				@Param("velicinaMajce") String velicinaMajce,
-//				@Param("adresa") String adresa,
-//				@Param("drzava") String drzava,
-//				@Param("najBoljeVreme") String najBoljeVreme,
-//				@Param("klub") String klub,
-//				int page);
-		
 //		// dugme nestalo
 //		@Override
 //		public Page<Pivo> nestalo(int page) {

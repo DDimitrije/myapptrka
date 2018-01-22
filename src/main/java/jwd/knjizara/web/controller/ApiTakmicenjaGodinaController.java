@@ -51,8 +51,8 @@ public class ApiTakmicenjaGodinaController {// pivarai
 		return new ResponseEntity<>(toDTO.convert(takmicenjaGodina), HttpStatus.OK);
 	}
 
-	@RequestMapping(value = "/{takmicenjaGodinaId}/piva")
-	public ResponseEntity<List<ManifestacijaDTO>> manifestacijaPivara(@PathVariable Long takmicenjaGodinaId,
+	@RequestMapping(value = "/{takmicenjaGodinaId}/manifestacije")
+	public ResponseEntity<List<ManifestacijaDTO>> manifestacijaTakmicenjaGodina(@PathVariable Long takmicenjaGodinaId,
 			@RequestParam(defaultValue = "0") int pageNum) {
 		Page<Manifestacija> manifestacija = manifestacijaService.findByTakmicenjaGodinaId(pageNum, takmicenjaGodinaId);
 
