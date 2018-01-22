@@ -3,13 +3,8 @@ package jwd.knjizara.service;
 
 import java.util.List;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.repository.query.Param;
 
-import jwd.knjizara.model.TakmicenjaGodina;
 import jwd.knjizara.model.Trka;
-
-<<<<<<< HEAD
 
 
 //	Page<Trka> findAll();
@@ -31,12 +26,12 @@ import jwd.knjizara.model.Trka;
 		void save(Trka trka);
 		void remove(Long id);
 
-	
+}
 		
 
 
 
-=======
+
 //public interface TrkaService {
 //
 //	Page<Trka> findAll(int pageNum);
@@ -54,12 +49,4 @@ import jwd.knjizara.model.Trka;
 //
 //}
 
-public interface TrkaService {
-	
-	List<Trka> findAll();
-	Trka findOne(Long id);
-	void save(Trka trka);
-	void remove(Long id);
->>>>>>> 154e6114b3aa5b144d1238ec3d3ea5d02f4c8ed5
 
-}

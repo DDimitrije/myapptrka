@@ -36,19 +36,6 @@ public class ManifestacijaDTOTOManifestacija implements Converter<ManifestacijaD
 		manifestacija.setTakmicenjaGodina(takmicenjaGodinaService.findOne(source.getTakmicenjaGodinaId()));
 		//manifestacija.setTakmicenjaGodina(source.getTakmicenjaGodinaId());
 		
-		
-//		pivo.setKolicina(source.getKolicina());
-//		pivo.setProcenat_alkohola(source.getProcenat_alkohola());
-//		pivo.setPivara(pivaraService.findOne(source.getPivaraId()));
-
-		// pivo.setId(source.getId());
-		// pivo.setNaziv(source.getNaziv());
-		// pivo.setProcenat_alkohola(source.getProcenat_alkohola());
-		// pivo.setIBU(source.getIBU());
-		// pivo.setKolicina(source.getKolicina());
-		//
-		// pivo.setPivaraId(source.getPivaraId());
-		// pivo.setPivara(source.getPivaraNaziv());
 		return manifestacija;
 	}
 }

@@ -4,24 +4,12 @@ import java.util.Date;
 import java.util.List;
 
 import javax.transaction.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.stereotype.Service;
-
-
 import jwd.knjizara.model.Trka;
-
-
 import jwd.knjizara.repository.TrkaRepository;
-
 import jwd.knjizara.service.TrkaService;
 
-<<<<<<< HEAD
-@Service
-@Transactional
-=======
-//public class JpaTrkaServiceImpl implements TrkaService {
 //	@Autowired
 //	private TrkaRepository trkaRepository;
 //	
@@ -75,21 +63,10 @@ import jwd.knjizara.service.TrkaService;
 //
 //}
 
-import java.util.List;
-
-import javax.transaction.Transactional;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import jwd.knjizara.model.Trka;
-import jwd.knjizara.repository.TrkaRepository;
-import jwd.knjizara.service.TrkaService;
-
 @Service
 @Transactional
 
->>>>>>> 154e6114b3aa5b144d1238ec3d3ea5d02f4c8ed5
+
 public class JpaTrkaServiceImpl implements TrkaService {
 	@Autowired
 	private TrkaRepository trkaRepository;
@@ -113,8 +90,4 @@ public class JpaTrkaServiceImpl implements TrkaService {
 	public void remove(Long id) {
 		trkaRepository.delete(id);
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 154e6114b3aa5b144d1238ec3d3ea5d02f4c8ed5

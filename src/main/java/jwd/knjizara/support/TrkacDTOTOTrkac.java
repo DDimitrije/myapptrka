@@ -41,14 +41,6 @@ public class TrkacDTOTOTrkac implements Converter<TrkacDTO, Trkac> {
 		//trkac.setNaziv(trkaService.findOne(source.getTrkaNaziv()));
 		trkac.setTrka(trkaService.findOne(source.getTrkaId()));
 
-		// pivo.setId(source.getId());
-		// pivo.setNaziv(source.getNaziv());
-		// pivo.setProcenat_alkohola(source.getProcenat_alkohola());
-		// pivo.setIBU(source.getIBU());
-		// pivo.setKolicina(source.getKolicina());
-		//
-		// pivo.setPivaraId(source.getPivaraId());
-		// pivo.setPivara(source.getPivaraNaziv());
 		return trkac;
 	}
 	

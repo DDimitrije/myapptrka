@@ -146,10 +146,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import jwd.knjizara.model.Trkac;
-<<<<<<< HEAD
-=======
-import jwd.knjizara.model.TakmicenjaGodina;
->>>>>>> 154e6114b3aa5b144d1238ec3d3ea5d02f4c8ed5
+
 import jwd.knjizara.model.Trka;
 import jwd.knjizara.service.TrkacService;
 import jwd.knjizara.service.TrkaService;
@@ -187,13 +184,9 @@ public class ApiTrkaController {// pivarai
 		return new ResponseEntity<>(toDTO.convert(trka), HttpStatus.OK);
 	}
 
-<<<<<<< HEAD
 	@RequestMapping(value = "/{trkaId}/trkaci")
 	public ResponseEntity<List<TrkacDTO>> trkacTrka(@PathVariable Long trkaId,
-=======
-	@RequestMapping(value = "/{trkaId}/piva")
-	public ResponseEntity<List<TrkacDTO>> trkacPivara(@PathVariable Long trkaId,
->>>>>>> 154e6114b3aa5b144d1238ec3d3ea5d02f4c8ed5
+
 			@RequestParam(defaultValue = "0") int pageNum) {
 		Page<Trkac> trkac = trkacService.findByTrkaId(pageNum, trkaId);
 
@@ -202,3 +195,4 @@ public class ApiTrkaController {// pivarai
 		return new ResponseEntity<>(toTrkacDTO.convert(trkac.getContent()), headers, HttpStatus.OK);
 	}
 }
+

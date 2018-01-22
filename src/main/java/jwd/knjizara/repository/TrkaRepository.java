@@ -12,9 +12,9 @@ import jwd.knjizara.model.TakmicenjaGodina;
 import jwd.knjizara.model.Trka;
 import jwd.knjizara.model.Trkac;
 
-<<<<<<< HEAD
-@Repository
-public interface TrkaRepository extends JpaRepository<Trka, Long>  {
+
+//@Repository
+//public interface TrkaRepository extends JpaRepository<Trka, Long>  {
 //Page<Trka> findByManfestacijaId( Pageable pageRequest);
 	
 //	@Query("SELECT k FROM Trka k WHERE "
@@ -28,7 +28,7 @@ public interface TrkaRepository extends JpaRepository<Trka, Long>  {
 //			+ "(:najBoljeVreme IS NULL OR k.najBoljeVreme  like :najBoljeVreme ) AND "
 //			+ "(:klub IS NULL OR k.klub  like :klub ) "
 //			)
-=======
+
 //@Repository
 //public interface TrkaRepository extends JpaRepository<Trka, Long>  {
 //Page<Trka> findByManfestacijaId( Pageable pageRequest);
@@ -58,7 +58,7 @@ public interface TrkaRepository extends JpaRepository<Trka, Long>  {
 //
 //	@Query("SELECT k FROM Trka k WHERE " + "(:duzinaStaze IS NULL or k.duzinaStaze like :duzinaStaze ) AND "
 //			+ "(:kategorija IS NULL OR k.kategorija  like :kategorija ) "
->>>>>>> 154e6114b3aa5b144d1238ec3d3ea5d02f4c8ed5
+
 //
 //	)
 //
@@ -70,7 +70,6 @@ public interface TrkaRepository extends JpaRepository<Trka, Long>  {
 @Repository
 public interface TrkaRepository extends JpaRepository<Trka, Long> {
 
-<<<<<<< HEAD
 //	@Query("SELECT k FROM Trka k WHERE " + "(:duzinaStaze IS NULL or k.duzinaStaze like :duzinaStaze ) AND "
 //			+ "(:kategorija IS NULL OR k.kategorija  like :kategorija ) "
 //
@@ -80,7 +79,6 @@ public interface TrkaRepository extends JpaRepository<Trka, Long> {
 //			Pageable pageRequest);
 //
 //	Page<Trka> findByManifestacijaId(Long manifestacijaId, PageRequest pageRequest); 
+
 }
-=======
-}
->>>>>>> 154e6114b3aa5b144d1238ec3d3ea5d02f4c8ed5
+

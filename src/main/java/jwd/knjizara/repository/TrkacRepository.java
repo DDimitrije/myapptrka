@@ -24,7 +24,9 @@ Page<Trkac> findByTrkaId( Pageable pageRequest);
 //			@Param("duzinaStaze") String duzinaStaze, 
 //			@Param("kategorija") String kategorija, 
 //			Pageable pageRequest);
-	
+
+
+
 	@Query("SELECT k FROM Trkac k WHERE "
 			+ "(:ime IS NULL or k.ime like :ime ) AND "
 			+ "(:prezime IS NULL OR k.prezime  like :prezime ) AND "
