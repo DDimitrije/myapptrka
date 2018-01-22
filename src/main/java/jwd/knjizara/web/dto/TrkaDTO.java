@@ -10,8 +10,8 @@ public class TrkaDTO {
 //		private Double IBU;
 //		private Integer kolicina;
 //		private Double procenat_alkohola;
-		private String manifestacijaNaziv;
-		private Long manifestacijaId;
+		//private String manifestacijaNaziv;
+		//private Long manifestacijaId;
 		
 //		private Long vrstaPivaId;
 //		private String vrstaPivaNaziv;
@@ -36,18 +36,18 @@ public class TrkaDTO {
 		public void setKategorija(String kategorija) {
 			this.kategorija = kategorija;
 		}
-		public Long getManifestacijaId() {
-			return manifestacijaId;
-		}
-		public void setManifestacijaId(Long manifestacijaId) {
-			this.manifestacijaId = manifestacijaId;
-		}
-		public String getManifestacijaNaziv() {
-			return manifestacijaNaziv;
-		}
-		public void setManifestacijaNaziv(String manifestacijaNaziv) {
-			this.manifestacijaNaziv = manifestacijaNaziv;
-		}
+//		public Long getManifestacijaId() {
+//			return manifestacijaId;
+//		}
+//		public void setManifestacijaId(Long manifestacijaId) {
+//			this.manifestacijaId = manifestacijaId;
+//		}
+//		public String getManifestacijaNaziv() {
+//			return manifestacijaNaziv;
+//		}
+//		public void setManifestacijaNaziv(String manifestacijaNaziv) {
+//			this.manifestacijaNaziv = manifestacijaNaziv;
+//		}
 		
 		
 //		public Long getIzdavacId() {

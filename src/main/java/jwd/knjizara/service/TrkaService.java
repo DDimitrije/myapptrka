@@ -9,6 +9,7 @@ import org.springframework.data.repository.query.Param;
 import jwd.knjizara.model.TakmicenjaGodina;
 import jwd.knjizara.model.Trka;
 
+<<<<<<< HEAD
 
 
 //	Page<Trka> findAll();
@@ -35,5 +36,30 @@ import jwd.knjizara.model.Trka;
 
 
 
+=======
+//public interface TrkaService {
+//
+//	Page<Trka> findAll(int pageNum);
+//	Trka findOne(Long id);
+//	void save(Trka trka);
+//	void remove(Long id);
+//	Page<Trka> findByManifestacijaId(int pageNum, Long manifestacijaId);//pivaraID
+//
+//	Page<Trka> pretraga(
+//			@Param("duzinaStaze") String duzinaStaze,  
+//			@Param("kategorija") String kategorija, 
+//			int page);
+//	//Page<Manifestacija> pretraga(String naziv, Date datumOdrzavanja, String mestoOdrzavanja, int page);
+//	
+//
+//}
+
+public interface TrkaService {
+	
+	List<Trka> findAll();
+	Trka findOne(Long id);
+	void save(Trka trka);
+	void remove(Long id);
+>>>>>>> 154e6114b3aa5b144d1238ec3d3ea5d02f4c8ed5
 
 }

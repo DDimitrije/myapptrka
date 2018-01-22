@@ -1,6 +1,10 @@
 package jwd.knjizara.model;
 
 import java.util.ArrayList;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 154e6114b3aa5b144d1238ec3d3ea5d02f4c8ed5
 import java.util.List;
 
 import javax.persistence.CascadeType;

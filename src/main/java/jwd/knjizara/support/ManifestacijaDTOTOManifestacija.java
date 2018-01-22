@@ -19,6 +19,7 @@ public class ManifestacijaDTOTOManifestacija implements Converter<ManifestacijaD
 	@Autowired
 	private TakmicenjaGodinaService takmicenjaGodinaService;
 
+	
 	@Override
 	public Manifestacija convert(ManifestacijaDTO source) {
 		Manifestacija manifestacija;
